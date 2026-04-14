@@ -1,0 +1,223 @@
+.loginWrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--raised);
+  padding: 24px;
+}
+.loginCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+}
+.loginTitle {
+  font-family: var(--syne);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+.loginBtn {
+  width: 100%;
+  padding: 12px;
+  background: #E8500A;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--syne);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 4px;
+}
+.loginBtn:hover:not(:disabled) { opacity: 0.88; }
+.loginBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+.error {
+  font-size: 13px;
+  color: #C0291F;
+  background: #FCECEA;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem 16px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.title {
+  font-family: var(--syne);
+  font-size: 22px;
+  font-weight: 800;
+}
+.digestBtn {
+  padding: 10px 18px;
+  background: #1A7A4A;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--syne);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.digestBtn:hover:not(:disabled) { opacity: 0.88; }
+.digestBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.message {
+  background: #E6F5EE;
+  border: 1px solid #9FE1CB;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #1A7A4A;
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.statCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+.statVal {
+  font-family: var(--syne);
+  font-size: 28px;
+  font-weight: 700;
+  color: #E8500A;
+}
+.statLbl { font-size: 11px; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.4px; }
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.flagCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+.flagMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.platform {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: #111;
+  color: #fff;
+  text-transform: uppercase;
+}
+.location { font-size: 12px; color: var(--muted); }
+.flagCount {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: #C0291F;
+  background: #FCECEA;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.postBody {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.photoRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.flagList {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-bottom: 12px;
+}
+.flagItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+.flagReason {
+  font-weight: 600;
+  color: #C0291F;
+}
+.flagDetails {
+  color: var(--muted);
+  font-style: italic;
+  flex: 1;
+}
+.flagTime { color: var(--muted); margin-left: auto; }
+
+.actions { display: flex; gap: 8px; }
+.keepBtn {
+  flex: 1;
+  padding: 10px;
+  background: #E6F5EE;
+  color: #1A7A4A;
+  border: 1px solid #9FE1CB;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.keepBtn:hover { opacity: 0.8; }
+.deleteBtn {
+  flex: 1;
+  padding: 10px;
+  background: #FCECEA;
+  color: #C0291F;
+  border: 1px solid #F5C0BC;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.deleteBtn:hover { opacity: 0.8; }

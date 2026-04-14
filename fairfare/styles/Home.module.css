@@ -1,0 +1,209 @@
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.headerInner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: var(--syne);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--orange);
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--ink); }
+.tagline { font-size: 11px; color: var(--muted); margin-top: 1px; }
+
+.nav { display: flex; gap: 6px; }
+.navBtn {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  transition: all 0.15s;
+}
+.navBtn:hover, .active {
+  background: var(--orange) !important;
+  color: #fff !important;
+  border-color: var(--orange) !important;
+}
+
+.main { flex: 1; padding: 1.5rem 0; }
+
+.statsBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.statCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+.statVal {
+  font-family: var(--syne);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--orange);
+}
+.statLabel { font-size: 11px; color: var(--muted); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.4px; }
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.sectionTitle {
+  font-family: var(--syne);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.postBtn {
+  font-family: var(--syne);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: var(--orange);
+  color: #fff;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+.postBtn:hover { opacity: 0.88; }
+
+.tabBar {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.tab {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+.tab:hover { color: var(--ink); }
+.activeTab { color: var(--orange) !important; border-bottom-color: var(--orange) !important; }
+
+.filterRow {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+.searchInput { min-width: 0; }
+.filterSelect { width: auto; min-width: 120px; }
+
+@media (max-width: 600px) {
+  .filterRow { grid-template-columns: 1fr 1fr; }
+  .searchInput { grid-column: 1 / -1; }
+}
+
+.loading, .empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Company breakdown */
+.subtext { font-size: 13px; color: var(--muted); margin-bottom: 1.25rem; }
+
+.companyRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.companyName {
+  font-family: var(--syne);
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 110px;
+}
+.companyBar { flex: 1; }
+.companyTrack {
+  height: 10px;
+  background: var(--raised);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 4px;
+}
+.companyDriverFill { background: var(--green); }
+.companyPlatformFill { background: var(--red); }
+.companyNums { display: flex; justify-content: space-between; font-size: 11px; font-weight: 500; }
+.driverNum { color: var(--green); }
+.platformNum { color: var(--red); }
+.companyMeta { font-size: 11px; color: var(--muted); min-width: 60px; text-align: right; }
+
+.disclaimer {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 1.5rem;
+  padding: 12px;
+  background: var(--raised);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* State grid */
+.stateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 8px;
+}
+.stateBtn {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  text-align: center;
+  transition: all 0.15s;
+}
+.stateBtn:hover {
+  background: var(--orange-light);
+  color: var(--orange);
+  border-color: var(--orange-mid);
+}
+
+/* Footer */
+.footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 2rem;
+}
